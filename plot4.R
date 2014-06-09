@@ -8,7 +8,7 @@ colnames(data) <- header[1, ]
 data$Datetime <- strptime(paste(data$Date, data$Time), '%d/%m/%Y %H:%M:%S')
 
 # Plot 4
-png('./plot4.png', width = 480, height = 480)
+png('./plot4.png', width = 480, height = 480, bg = 'transparent')
 par(mfrow=c(2,2))
 
 # Subplot 4.1

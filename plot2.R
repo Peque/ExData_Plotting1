@@ -8,7 +8,7 @@ colnames(data) <- header[1, ]
 data$Datetime <- strptime(paste(data$Date, data$Time), '%d/%m/%Y %H:%M:%S')
 
 # Plot 2
-png('./plot2.png', width = 480, height = 480)
+png('./plot2.png', width = 480, height = 480, bg = 'transparent')
 plot(data$Datetime, data$Global_active_power, type = 'l', main = '', xlab = '',
      ylab = 'Global Active Power (kilowatts)')
 dev.off()

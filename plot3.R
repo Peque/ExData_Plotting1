@@ -8,7 +8,7 @@ colnames(data) <- header[1, ]
 data$Datetime <- strptime(paste(data$Date, data$Time), '%d/%m/%Y %H:%M:%S')
 
 # Plot 3
-png('./plot3.png', width = 480, height = 480)
+png('./plot3.png', width = 480, height = 480, bg = 'transparent')
 plot(data$Datetime, data$Sub_metering_1, type = 'l', main = '', xlab = '',
      ylab = 'Energy sub metering')
 lines(data$Datetime, data$Sub_metering_2, col = 'red')
